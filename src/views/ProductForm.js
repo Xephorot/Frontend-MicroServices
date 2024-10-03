@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import FormButtons from "../components/FormButtons";
+import Navbar from "../components/Admin/Navbar";
+import Sidebar from "../components/Admin/Sidebar";
+import FormButtons from "../components/Admin/FormButtons";
 import { useProductForm } from "../hooks/useProductForm";
 
 function ProductForm() {
@@ -46,7 +46,11 @@ function ProductForm() {
                   required
                 />
               </div>
-              <FormButtons onSubmit={handleSubmit} onCancel={handleCancel} isEditMode={isEditMode} />
+              <FormButtons
+                onSubmit={handleSubmit}
+                onCancel={handleCancel}
+                isEditMode={isEditMode}
+              />
             </form>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Admin/Navbar";
+import Sidebar from "../components/Admin/Sidebar";
 import ProductTable from "../components/Admin/ProductTable";
-import { useProducts } from "../hooks/useProducts";
+import { useProducts } from "../hooks/useProductsAdmin";
 import { useEditHandler } from "../hooks/useEditHandler";
 import { useSearchHandler } from "../hooks/useSearchHandler";
-import LoadingAndErrorHandling from "../components/LoadingAndErrorHandling";
+import LoadingAndErrorHandling from "../components/Admin/LoadingAndErrorHandling";
 
 function AdminView() {
   const { products, loading, error, searchTerm, setSearchTerm, handleDelete } =

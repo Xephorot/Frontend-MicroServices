@@ -10,16 +10,12 @@ function App() {
         <Router>
             <div className="container-fluid">
                 <Routes>
-                    {/* Ruta para la vista del Administrador */}
                     <Route path="/admin" element={<AdminView />} />
 
-                    {/* Ruta para crear un nuevo producto */}
                     <Route path="/admin/new" element={<ProductForm onSave={() => {}} />} />
 
-                    {/* Ruta para editar un producto existente */}
                     <Route path="/admin/edit/:id" element={<ProductForm onSave={() => {}} />} />
 
-                    {/* Ruta para la vista principal del usuario */}
                     <Route path="/" element={<MainView />} />
                 </Routes>
             </div>
