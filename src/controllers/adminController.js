@@ -32,9 +32,9 @@ export const saveProduct = async (productData, id) => {
         const response = await axios({
             method,
             url,
-            data: productData,  // Enviar como JSON
+            data: productData,
             headers: {
-                'Content-Type': 'application/json',  // Indicamos que enviamos JSON
+                'Content-Type': 'application/json',
             },
         });
 

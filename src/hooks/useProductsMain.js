@@ -1,11 +1,9 @@
-// src/hooks/useProducts.js
-
 import { useState, useEffect } from "react";
 import { getMainProducts, likeProduct } from "../controllers/mainController";
 
 export const useProducts = () => {
   const [products, setProducts] = useState([]);
-  const [likedProducts, setLikedProducts] = useState([]); // Controlar los likes
+  const [likedProducts, setLikedProducts] = useState([]); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 

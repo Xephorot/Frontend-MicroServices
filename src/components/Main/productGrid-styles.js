@@ -1,5 +1,3 @@
-// src/styles/productGridStyles.js
-
 export const cardStyle = {
     width: "18rem",
     height: "18rem",
