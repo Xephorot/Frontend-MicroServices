@@ -1,70 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Configuración del Frontend con React
 
-## Available Scripts
+Este repositorio contiene el código del **Frontend** desarrollado en **React**. Este frontend interactúa con los microservicios **Main** y **Admin**, por lo que es necesario que los contenedores de dichos microservicios estén activos para que funcione correctamente.
 
-In the project directory, you can run:
+## Requisitos Previos
 
-### `npm start`
+Asegúrate de tener instalado lo siguiente en tu máquina antes de comenzar:
+- **Node.js**: [Instalar Node.js](https://nodejs.org/)
+- **Docker**: [Instalar Docker](https://docs.docker.com/get-docker/) (para los microservicios)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instrucciones Paso a Paso
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clonar el Repositorio
 
-### `npm test`
+Clona el repositorio en tu máquina local utilizando Git.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Xephorot/Frontend-MicroServices
+```
 
-### `npm run build`
+### 2. Instalar Dependencias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Instala las dependencias necesarias del proyecto utilizando `npm` o `yarn`:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O si prefieres usar **yarn**:
 
-### `npm run eject`
+```bash
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Asegurarse de que los Microservicios estén Corriendo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Este frontend depende de que los microservicios **Main** y **Admin** estén levantados y corriendo. Asegúrate de que los contenedores Docker para ambos servicios estén activos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Levantar los microservicios con Docker Compose**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Si aún no has levantado los contenedores de los microservicios, ejecuta el siguiente comando en las carpetas correspondientes de **Main** y **Admin**:
 
-## Learn More
+   ```bash
+   docker-compose up --build
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Verifica que los contenedores estén corriendo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   docker ps
+   ```
 
-### Code Splitting
+   Asegúrate de que los contenedores de **nest-main** y **nest-admin** estén activos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 4. Ejecutar el Frontend
 
-### Analyzing the Bundle Size
+Para ejecutar el servidor de desarrollo de React, usa el siguiente comando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+O si estás usando **yarn**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+yarn start
+```
 
-### Advanced Configuration
+Este comando levantará el frontend y lo servirá en el puerto `4200` (o el puerto que esté configurado en el código).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 5. Acceder al Frontend
 
-### Deployment
+Una vez que el frontend esté corriendo, puedes acceder a la aplicación en tu navegador:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+http://localhost:4200
+```
 
-### `npm run build` fails to minify
+### 6. Build para Producción
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Si deseas compilar el frontend para producción, ejecuta el siguiente comando:
+
+```bash
+npm run build
+```
+
+Esto generará una versión optimizada del frontend en la carpeta `build`.
+
+## Comandos Adicionales
+
+- **Instalar dependencias**:
+  ```bash
+  npm install
+  ```
+
+- **Iniciar el servidor de desarrollo**:
+  ```bash
+  npm start
+  ```
+
+- **Compilar para producción**:
+  ```bash
+  npm run build
+  ```
+
+## Contribución
+
+Si encuentras algún problema o tienes sugerencias para mejorar este proyecto, por favor abre un issue o envía un pull request.
