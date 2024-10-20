@@ -77,16 +77,6 @@ Una vez que el frontend esté corriendo, puedes acceder a la aplicación en tu n
 http://localhost:4200
 ```
 
-### 6. Build para Producción
-
-Si deseas compilar el frontend para producción, ejecuta el siguiente comando:
-
-```bash
-npm run build
-```
-
-Esto generará una versión optimizada del frontend en la carpeta `build`.
-
 ## Comandos Adicionales
 
 - **Instalar dependencias**:
