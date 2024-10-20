@@ -93,7 +93,3 @@ http://localhost:4200
   ```bash
   npm run build
   ```
-
-## Contribución
-
-Si encuentras algún problema o tienes sugerencias para mejorar este proyecto, por favor abre un issue o envía un pull request.
