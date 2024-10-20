@@ -93,3 +93,15 @@ http://localhost:4200
   ```bash
   npm run build
   ```
+  ## Repositorios Relacionados
+
+Este proyecto forma parte de un conjunto de microservicios y frontend que interactúan entre sí. Asegúrate de clonar también los siguientes repositorios para tener el entorno completo:
+
+1. **Main-Service** (Microservicio Principal - MongoDB):
+   - [Repositorio Main-Service](https://github.com/Xephorot/MircroServices---Main)
+
+2. **Admin-Service** (Microservicio Admin - MySQL):
+   - [Repositorio Admin-Service](https://github.com/Xephorot/Microservices---Admin)
+
+3. **Frontend** (Interfaz de Usuario - React):
+   - [Repositorio Frontend](https://github.com/Xephorot/Frontend-MicroServices)
