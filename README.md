@@ -88,11 +88,6 @@ http://localhost:4200
   ```bash
   npm start
   ```
-
-- **Compilar para producción**:
-  ```bash
-  npm run build
-  ```
   ## Repositorios Relacionados
 
 Este proyecto forma parte de un conjunto de microservicios y frontend que interactúan entre sí. Asegúrate de clonar también los siguientes repositorios para tener el entorno completo:
