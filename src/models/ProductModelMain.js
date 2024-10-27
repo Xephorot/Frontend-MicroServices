@@ -1,4 +1,3 @@
-
 export class ProductMain {
     constructor(_id, id, title, image, likes) {
         this._id = _id;
