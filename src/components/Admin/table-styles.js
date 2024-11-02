@@ -1,9 +1,12 @@
 export const columnStyle = { textAlign: "center" };
 
+
 export const imgStyle = {
   maxHeight: "80px",
-  width: "auto",
   maxWidth: "100%",
+  width: "100%",
+  objectFit: "contain",
+  overflow: "hidden",
 };
 
 export const rowStyle = {
