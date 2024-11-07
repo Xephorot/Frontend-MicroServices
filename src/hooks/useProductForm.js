@@ -28,6 +28,12 @@ export function useProductForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!title.trim() || !imageUrl.trim()) {
+      alert("Both title and image URL are required!");
+      return;
+    }
+
     try {
       const productData = { title, image: imageUrl };
       await saveProduct(productData, id);
